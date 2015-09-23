@@ -42,6 +42,21 @@
             </a>
           </li>
           {% endif %}
+          {% if site.owner.facebook %}
+          <li>
+              <a href="http://facebook.com/{{ site.owner.facebook }}" title="{{ site.owner.name}} on Facebook" target="_blank">
+                  <i class="icon-facebook icon-2x"></i></a>
+          </li>
+          {% endif %}
+	       {% if site.owner.google_plus %}
+            <li><a href="{{ site.owner.google_plus }}" title="{{ site.owner.name}} on Google+" target="_blank"><i class="icon-google-plus icon-2x"></i></a>
+            </li>
+        {% endif %}
+	       {% if site.owner.linkedin %}
+            <li><a href="http://linkedin.com/in/{{ site.owner.linkedin }}" title="{{ site.owner.name}} on LinkedIn" target="_blank"><i class="icon-linkedin icon-2x"></i></a>
+            </li>
+            {% endif %}
+	
         </ul>
       </div>
 
