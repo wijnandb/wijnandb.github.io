@@ -42,18 +42,18 @@
             </a>
           </li>
           {% endif %}
-          {% if site.owner.facebook %}
+          {% if site.facebook %}
           <li>
-              <a href="http://facebook.com/{{ site.owner.facebook }}" title="{{ site.owner.name}} on Facebook" target="_blank">
+              <a href="http://facebook.com/{{ site.facebook }}" title="{{ site.name}} on Facebook" target="_blank">
                   <i class="icon-facebook icon-2x"></i></a>
           </li>
           {% endif %}
 	       {% if site.owner.google_plus %}
-            <li><a href="{{ site.owner.google_plus }}" title="{{ site.owner.name}} on Google+" target="_blank"><i class="icon-google-plus icon-2x"></i></a>
+            <li><a href="https://plus.google.com/+{{ site.google_plus }}" title="{{ site.name}} op Google+" target="_blank"><span class="icon-google-plus icon-2x"></span></a>
             </li>
         {% endif %}
 	       {% if site.owner.linkedin %}
-            <li><a href="http://linkedin.com/in/{{ site.owner.linkedin }}" title="{{ site.owner.name}} on LinkedIn" target="_blank"><i class="icon-linkedin icon-2x"></i></a>
+            <li><a href="http://linkedin.com/in/{{ site.linkedin }}" title="{{ site.name}} op LinkedIn" target="_blank"><span class="icon-linkedin icon-2x"></span></a>
             </li>
             {% endif %}
 	
