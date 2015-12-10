@@ -1,8 +1,7 @@
 # Site settings
 title: Wijnand Baretta
 email: wijnandb@retta.nl
-description: > # this means to ignore newlines until "baseurl:"
-  .....
+description: Hoe kan het ecosysteem van het onderwijs zodanig worden veranderd, dat docenten meer vrijheid krijgen om hun leerlingen te inspireren, uit te dagen &eacute;n persoonlijk te begeleiden?
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://brtt.nl/" # the base hostname & protocol for your site
 twitter_username: wijnandb
