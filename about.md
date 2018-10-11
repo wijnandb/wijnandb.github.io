@@ -8,5 +8,5 @@ Dit is een mooie plaats om iets over mezelf te vertellen, dus dat doe ik terzijn
 
 Maar nu nog niet.
 
-Deze site gaat verdwijnen. Zonder dat er ooit iets op heeft gestaan. Zielig eiegnlijk. Maar ja, wat doe je eraan?
+Deze site gaat verdwijnen. Zonder dat er ooit iets op heeft gestaan. Zielig eigenlijk. Maar ja, wat doe je eraan?
 
