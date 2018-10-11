@@ -8,5 +8,5 @@ Dit is een mooie plaats om iets over mezelf te vertellen, dus dat doe ik terzijn
 
 Maar nu nog niet.
 
-Eerst zorg ik dat ik trots ben op deze site en de stukjes die ik er op plaats.
+Deze site gaat verdwijnen. Zonder dat er ooit iets op heeft gestaan. Zielig eiegnlijk. Maar ja, wat doe je eraan?
 
