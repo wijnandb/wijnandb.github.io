@@ -29,7 +29,7 @@ iets mee te doen.
 Op deze plek ga ik dat doen. 
 
 Een Jekyll site, gehost op Github. Mooi vormgegeven (dat komt later), responsive, ge&iuml;nspireerd door 
-[medium.com] (http://medium.com). Onderverdeeld in verschillende categorie&euml;n, vanuit de gedachte dat je 
+[medium.com](http://medium.com). Onderverdeeld in verschillende categorie&euml;n, vanuit de gedachte dat je 
 tegenwoordig niet een hele site leest, maar een verhaal tegenkomt en dat leest. En soms smaakt dat naar meer. 
 En soms ook niet.
 
