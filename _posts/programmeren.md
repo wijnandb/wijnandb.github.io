@@ -15,5 +15,3 @@ Fantastisch initiatief, veel enthousiasme, maar als nadeel dat er nog altijd iem
 De uitdaging is dus om een oplossing te bieden waarbij een docent, ook als die niet kan programmeren, kinderen kan leren programmeren. 
 
 
-to be continued....
-
