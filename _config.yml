@@ -4,12 +4,12 @@ title: "digital transformation"
 description: "Software is eating the world. What will you do? Be eaten or use software as well?
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://brtt.nl/" # the base hostname & protocol for your site
-twitter_username: 
-github_username:  
-facebook: 
-linkedin: 
-google_plus: 
-name: 
+# twitter_username: 
+# github_username:  
+# facebook: 
+# linkedin: 
+# google_plus: 
+# name: 
 
 # Build settings
 markdown: kramdown
