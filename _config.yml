@@ -1,10 +1,9 @@
 # Site settings
 title: digital transformation
 email: 
-description: > # this means to ignore newlines until "baseurl:"
-  .....
+description: "Software is eating the world. What will you do? Be eaten or use software as well?
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://brtt.nl/" # the base hostname & protocol for your site
+url: "https://brtt.nl/" # the base hostname & protocol for your site
 twitter_username: 
 github_username:  
 facebook: 
