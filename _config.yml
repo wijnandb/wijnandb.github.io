@@ -1,14 +1,14 @@
 # Site settings
 title: "digital transformation"
-#  email:  
+email:  info@brtt.nl
 description: "Software is eating the world. What will you do? Be eaten or use software as well"
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://brtt.nl/" # the base hostname & protocol for your site
-# twitter_username: 
-# github_username:  
+twitter_username: wijnandb
+github_username: wijnandb
 # facebook: 
-# linkedin: 
-# google_plus: 
+linkedin: wijnandbaretta
+google_plus: wijnandbaretta
 # name: 
 
 # Build settings
