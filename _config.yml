@@ -1,7 +1,7 @@
 # Site settings
 title: "digital transformation"
 #  email:  
-description: "Software is eating the world. What will you do? Be eaten or use software as well?
+description: "Software is eating the world. What will you do? Be eaten or use software as well"
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://brtt.nl/" # the base hostname & protocol for your site
 # twitter_username: 
