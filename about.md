@@ -4,9 +4,6 @@ title: About
 permalink: /about/
 ---
 
-Dit is een mooie plaats om iets over mezelf te vertellen, dus dat doe ik terzijnertijd vast wel. 
-
-Maar nu nog niet.
-
-Deze site gaat verdwijnen. Zonder dat er ooit iets op heeft gestaan. Zielig eigenlijk. Maar ja, wat doe je eraan?
+Digital transformation gaat over hoe onder invloed van technologische ontwikkelingen onze wereld verandert, en wat je daar als ondernemer aan hebt of aan kunt doen.
+Stilstaan betekent verdwijnen.
 
