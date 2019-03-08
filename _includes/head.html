@@ -32,17 +32,38 @@
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
   <script>hljs.initHighlightingOnLoad();</script>
   <script>
-        document.addEventListener("DOMContentLoaded", function(){
-        Typed.new(".typed", {
-            strings: ["A little bit about ", "Something about me", "Something about this site", "Something about ..." ,"Something"],
-            typeSpeed: 100,
-            loop: false,
-            startDelay: 30,
-            backDelay: 500,
-            backSpeed: 40,
-            contentType: 'html',
-            });
-        });
-    </script>
+	$(function(){
 
+		$("#typed").typed({
+			strings: ["Typed.js is a JavaScript library.", "It tyops out", "It types out sentences.", "And then deletes them.", "Try it out!"],
+			typeSpeed: 30,
+      callback: function(){
+        shift();
+      }
+		});
+
+	});
+  function shift(){
+      $(".head-wrap").addClass("shift-text");
+      terminalHeight();
+  }
+
+  function terminalHeight(){
+      var termHeight = 10;
+      var value = termHeight.text();
+      value = parseInt(value);
+      setTimeout(function(){
+          if (value > 10){
+              value = value-1;
+              this.txtValue = value.toString();
+              termHeight.text(this.txtValue);
+              self.terminalHeight();
+          }
+          else{
+              clearTimeout();
+          }
+      }, 10);
+  }
+	</script>
+  
 </head>
