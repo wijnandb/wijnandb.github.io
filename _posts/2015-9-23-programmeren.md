@@ -4,6 +4,7 @@ title:  "Programmeren"
 date:   2015-09-23 21:45:51
 categories: codecult
 ---
+
 # Hoe kan ik mijn leerlingen leren programmeren?
 
 
@@ -14,5 +15,4 @@ Ja, dat kan ik. Door zelf naar de school te gaan, gebruik te maken van het mater
 Fantastisch initiatief, veel enthousiasme, maar als nadeel dat er nog altijd iemand naar de school toe moest, een niet-schaalbare oplossing derhalve.
 
 De uitdaging is dus om een oplossing te bieden waarbij een docent, ook als die niet kan programmeren, kinderen kan leren programmeren. 
-
 
