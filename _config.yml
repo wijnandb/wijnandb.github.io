@@ -3,7 +3,7 @@ title: digital transformation
 email:  info@brtt.nl
 description: "Software is eating the world. What will you do? Be eaten or use software as well?"
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "https://brtt.nl/" # the base hostname & protocol for your site
+url: "https://brtt.nl" # the base hostname & protocol for your site
 twitter_username: wijnandb
 github_username: wijnandb
 # facebook: 
