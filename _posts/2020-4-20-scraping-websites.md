@@ -9,14 +9,11 @@ I want to scrape Netflix. I want that for several reasons. One of them is that I
 
 So, how to do it?
 
-I am using Selenium, because I need to login to the site. 
+I am using Selenium, because I need to login to the site, and BeautifulSoup, . 
 
     import time
-
     from bs4 import BeautifulSoup
-    
     from selenium import webdriver
-    
     import requests
     
       
@@ -30,9 +27,9 @@ I am using Selenium, because I need to login to the site.
     
     time.sleep(1)  # Let the user actually see something!
     
-    driver.find_element_by_id('id_userLoginId').send_keys('wijnand.baretta@gmail.com')
+    driver.find_element_by_id('id_userLoginId').send_keys('my-e-mail-address')
     
-    driver.find_element_by_id('id_password').send_keys('N00rdw1jk')
+    driver.find_element_by_id('id_password').send_keys('my-password')
     
     driver.find_element_by_css_selector(".login-button").click()
     
@@ -53,5 +50,5 @@ I am using Selenium, because I need to login to the site.
     time.sleep(30)  # Let the user actually see something!
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NjQwODM2ODddfQ==
+eyJoaXN0b3J5IjpbODI3NTY4MTk5XX0=
 -->
