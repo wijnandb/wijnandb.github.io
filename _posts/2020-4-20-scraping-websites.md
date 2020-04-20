@@ -39,9 +39,12 @@ I managed to get all the links, but now I only want the movielinks and I want to
 
 In a spreadsheet I have pasted the links to all the movies, which all have a unique ID, by which I can get to the overview page of that specific movie:
 
+[https://www.netflix.com/title/80137897](https://www.netflix.com/title/80137897)
 
+On this page, I have a lot more information about the movie:
+- 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNDk0NTgzNTMsNDUxNjM4OTI0LC0xMT
-Y3ODQxMzY5XX0=
+eyJoaXN0b3J5IjpbMTc2NjcwMjM3MSwtMTE0OTQ1ODM1Myw0NT
+E2Mzg5MjQsLTExNjc4NDEzNjldfQ==
 -->
