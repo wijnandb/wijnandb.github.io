@@ -33,6 +33,8 @@ Here's my code so far:
     driver.get('https://www.netflix.com/browse/genre/10606?so=su')
     time.sleep(10)  # Quite a long wait to make sure the page is fully loaded
 
+So now I am ready to gstart looking at the content of the page.
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNjc4NDEzNjldfQ==
+eyJoaXN0b3J5IjpbNDUxNjM4OTI0LC0xMTY3ODQxMzY5XX0=
 -->
