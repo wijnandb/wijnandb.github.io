@@ -16,38 +16,21 @@ Here's my code so far:
     from bs4 import BeautifulSoup
     from selenium import webdriver
     import requests
-    
- driver = webdriver.Chrome('/usr/bin/chromedriver')
-    
-      
-      
+    driver = webdriver.Chrome('/usr/bin/chromedriver')
     
     driver.get ('https://www.netflix.com/nl-en/login')
-    
     time.sleep(1)  # Let the user actually see something!
-
     driver.find_element_by_id('id_userLoginId').send_keys('my-e-mail-address')
-    
-    driver.find_element_by_id('id_password').send_keys('my-password')
-    
-    driver.find_element_by_css_selector(".login-button").click()
-    
-    time.sleep(1)  # Let the user actually see something!
-    
-      
-    
-    driver.find_element_by_link_text('Wijnand Baretta').click()
-    
-    time.sleep(1)  # Let the user actually see something!
-    
-    driver.find_element_by_link_text('Films').click()
-    
-    time.sleep(1)  # Let the user actually see something!
-    
-    driver.get('https://www.netflix.com/browse/genre/10606?so=su')
-    
-    time.sleep(30)  # Let the user actually see something!
+driver.find_element_by_id('id_password').send_keys('my-password')
+driver.find_element_by_css_selector(".login-button").click()
+time.sleep(1)  # Let the user actually see something!
+driver.find_element_by_link_text('Wijnand Baretta').click()
+time.sleep(1)  # Let the user actually see something!
+driver.find_element_by_link_text('Films').click()
+time.sleep(1)  # Let the user actually see something!
+driver.get('https://www.netflix.com/browse/genre/10606?so=su')
+time.sleep(30)  # Let the user actually see something!
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU2ODc2MzgxOV19
+eyJoaXN0b3J5IjpbMTE5MjI4NzA0M119
 -->
