@@ -21,16 +21,17 @@ Here's my code so far:
     driver.get ('https://www.netflix.com/nl-en/login')
     time.sleep(1)  # Let the user actually see something!
     driver.find_element_by_id('id_userLoginId').send_keys('my-e-mail-address')
-driver.find_element_by_id('id_password').send_keys('my-password')
-driver.find_element_by_css_selector(".login-button").click()
-time.sleep(1)  # Let the user actually see something!
-driver.find_element_by_link_text('Wijnand Baretta').click()
-time.sleep(1)  # Let the user actually see something!
-driver.find_element_by_link_text('Films').click()
-time.sleep(1)  # Let the user actually see something!
-driver.get('https://www.netflix.com/browse/genre/10606?so=su')
-time.sleep(30)  # Let the user actually see something!
+    driver.find_element_by_id('id_password').send_keys('my-password')
+    driver.find_element_by_css_selector(".login-button").click()
+    time.sleep(1)  # Let the user actually see something!
+    driver.find_element_by_link_text('Wijnand Baretta').click()
+    time.sleep(1)  # Let the user actually see something!
+    driver.find_element_by_link_text('Films').click()
+    time.sleep(1)  # Let the user actually see something!
+    # I am selecting the genre "Dutch Films"
+    driver.get('https://www.netflix.com/browse/genre/10606?so=su')
+    time.sleep(10)  # Quite a long wait to make sure the page is fully loaded
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE5MjI4NzA0M119
+eyJoaXN0b3J5IjpbMTgwMTg0MDQwOV19
 -->
