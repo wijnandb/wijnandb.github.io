@@ -3,6 +3,7 @@ layout: post
 title:  "Programmeren"
 date:   2015-09-23 21:45:51
 categories: codecult
+
 ---
 
 # Hoe kan ik mijn leerlingen leren programmeren?
@@ -16,3 +17,6 @@ Fantastisch initiatief, veel enthousiasme, maar als nadeel dat er nog altijd iem
 
 De uitdaging is dus om een oplossing te bieden waarbij een docent, ook als die niet kan programmeren, kinderen kan leren programmeren. 
 
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTIxMzA2ODA1MzBdfQ==
+-->
