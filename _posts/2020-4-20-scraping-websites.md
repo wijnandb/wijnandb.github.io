@@ -16,7 +16,12 @@ I am using Selenium, because I need to login to the site, and BeautifulSoup, .
     from selenium import webdriver
     import requests
     
-      
+ So these are the imports. Next, I need to use the webdriver. I am using Chrome. To locate it on a Linux machine, type
+ 
+
+    whereis
+
+ 
     
     driver = webdriver.Chrome('/usr/bin/chromedriver')  # Optional argument, if not specified will search path.
     
@@ -26,7 +31,7 @@ I am using Selenium, because I need to login to the site, and BeautifulSoup, .
     driver.get ('https://www.netflix.com/nl-en/login')
     
     time.sleep(1)  # Let the user actually see something!
-    
+
     driver.find_element_by_id('id_userLoginId').send_keys('my-e-mail-address')
     
     driver.find_element_by_id('id_password').send_keys('my-password')
@@ -50,5 +55,5 @@ I am using Selenium, because I need to login to the site, and BeautifulSoup, .
     time.sleep(30)  # Let the user actually see something!
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODI3NTY4MTk5XX0=
+eyJoaXN0b3J5IjpbLTEzNzYyNDQ4M119
 -->
