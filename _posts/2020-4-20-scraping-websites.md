@@ -9,21 +9,15 @@ I want to scrape Netflix. I want that for several reasons. One of them is that I
 
 So, how to do it?
 
-I am using Selenium, because I need to login to the site, and BeautifulSoup, . 
+I am using Selenium, because I need to login to the site, and BeautifulSoup, so I can find elements in the DOM.
+Here's my code so far: 
 
     import time
     from bs4 import BeautifulSoup
     from selenium import webdriver
     import requests
     
- So these are the imports. Next, I need to use the webdriver. I am using Chrome. To locate it on a Linux machine, type
- 
-
-    whereis
-
- 
-    
-    driver = webdriver.Chrome('/usr/bin/chromedriver')  # Optional argument, if not specified will search path.
+ driver = webdriver.Chrome('/usr/bin/chromedriver')
     
       
       
@@ -55,5 +49,5 @@ I am using Selenium, because I need to login to the site, and BeautifulSoup, .
     time.sleep(30)  # Let the user actually see something!
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNzYyNDQ4M119
+eyJoaXN0b3J5IjpbLTU2ODc2MzgxOV19
 -->
