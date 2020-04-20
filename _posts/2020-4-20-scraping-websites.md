@@ -37,9 +37,11 @@ So now I am ready to start looking at the content of the page.
 
 I managed to get all the links, but now I only want the movielinks and I want to include the titlkes as well as the image that goes with the movie.
 
-In a spreadsheet I have pasted the links to all the movies, which all have a uni
+In a spreadsheet I have pasted the links to all the movies, which all have a unique ID, by which I can get to the overview page of that specific movie:
+
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTI5MzE1Mzk2LDQ1MTYzODkyNCwtMTE2Nz
-g0MTM2OV19
+eyJoaXN0b3J5IjpbLTExNDk0NTgzNTMsNDUxNjM4OTI0LC0xMT
+Y3ODQxMzY5XX0=
 -->
