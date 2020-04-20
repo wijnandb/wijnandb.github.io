@@ -33,8 +33,13 @@ Here's my code so far:
     driver.get('https://www.netflix.com/browse/genre/10606?so=su')
     time.sleep(10)  # Quite a long wait to make sure the page is fully loaded
 
-So now I am ready to gstart looking at the content of the page.
+So now I am ready to start looking at the content of the page.
+
+I managed to get all the links, but now I only want the movielinks and I want to include the titlkes as well as the image that goes with the movie.
+
+In a spreadsheet I have pasted the links to all the movies, which all have a uni
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDUxNjM4OTI0LC0xMTY3ODQxMzY5XX0=
+eyJoaXN0b3J5IjpbNTI5MzE1Mzk2LDQ1MTYzODkyNCwtMTE2Nz
+g0MTM2OV19
 -->
