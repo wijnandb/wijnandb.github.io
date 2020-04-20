@@ -9,7 +9,49 @@ I want to scrape Netflix. I want that for several reasons. One of them is that I
 
 So, how to do it?
 
-I am 
+I am using Selenium, because I need to login to the site. 
+
+    import time
+
+    from bs4 import BeautifulSoup
+    
+    from selenium import webdriver
+    
+    import requests
+    
+      
+    
+    driver = webdriver.Chrome('/usr/bin/chromedriver')  # Optional argument, if not specified will search path.
+    
+      
+      
+    
+    driver.get ('https://www.netflix.com/nl-en/login')
+    
+    time.sleep(1)  # Let the user actually see something!
+    
+    driver.find_element_by_id('id_userLoginId').send_keys('wijnand.baretta@gmail.com')
+    
+    driver.find_element_by_id('id_password').send_keys('N00rdw1jk')
+    
+    driver.find_element_by_css_selector(".login-button").click()
+    
+    time.sleep(1)  # Let the user actually see something!
+    
+      
+    
+    driver.find_element_by_link_text('Wijnand Baretta').click()
+    
+    time.sleep(1)  # Let the user actually see something!
+    
+    driver.find_element_by_link_text('Films').click()
+    
+    time.sleep(1)  # Let the user actually see something!
+    
+    driver.get('https://www.netflix.com/browse/genre/10606?so=su')
+    
+    time.sleep(30)  # Let the user actually see something!
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MTkxNjkyMjZdfQ==
+eyJoaXN0b3J5IjpbLTE0NjQwODM2ODddfQ==
 -->
