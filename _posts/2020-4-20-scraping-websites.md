@@ -1,7 +1,7 @@
 ---
-title: Scraping websites
+title: Scraping ~~websites~~ Netflix
 date: 2020-4-20
-categories: [scraping, selenium, beautifulsoup]
+categories: [scraping, selenium, beautifulsoup, netflix]
 
 ---
 
@@ -55,7 +55,7 @@ So, how to do it?
 - store them with the category_id
 - repeat for next category_id
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMxNzczOTczNSwtNjk5MzgxNTY1LC0xOT
+eyJoaXN0b3J5IjpbMTIxODg4NTc1NywtNjk5MzgxNTY1LC0xOT
 gwOTEyNDAsLTEyNTkzMDQ2NzUsMTc0Mzg4MzI0NywtODI1NTcw
 NzM1LDE3NjY3MDIzNzEsLTExNDk0NTgzNTMsNDUxNjM4OTI0LC
 0xMTY3ODQxMzY5XX0=
