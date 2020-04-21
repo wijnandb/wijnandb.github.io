@@ -43,8 +43,9 @@ The next step is to get the categories per movie. There are two approaches I'm c
 
 I prefer the last method, for the simple reason that I will have the data in a format I can immediately store in a table.
 
-Considering the load: I will have to go through all the categories I know (211), scroll to the end of the list and get the id's of all the movies and series within that category. For what I have seen, there are at most 5 different categories, and often there are less. Assuming 5 categories per title, currently 3835 titles on the Dutch Netflix, there will be less than 20.000 movie/category combinations. That is acceptable.
+~~Considering the load: I will have to go through all the categories I know (211), scroll to the end of the list and get the id's of all the movies and series within that category. For what I have seen, there are at most 5 different categories, and often there are less. Assuming 5 categories per title, currently 3835 titles on the Dutch Netflix, there will be less than 20.000 movie/category combinations. That is acceptable.~~
 
+OK, I was wrong there. There are [way more categories](https://www.whats-on-netflix.com/library/categories/)
 So, how to do it?
 
 - open Netflix
@@ -57,8 +58,8 @@ So, how to do it?
 
 I'm gonna get coding, wil post when I'm done and ready for the next step!
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5Mjc5NDUwMTgsLTY5OTM4MTU2NSwtMT
-k4MDkxMjQwLC0xMjU5MzA0Njc1LDE3NDM4ODMyNDcsLTgyNTU3
-MDczNSwxNzY2NzAyMzcxLC0xMTQ5NDU4MzUzLDQ1MTYzODkyNC
-wtMTE2Nzg0MTM2OV19
+eyJoaXN0b3J5IjpbNDc2NzE5NTU1LC0xOTI3OTQ1MDE4LC02OT
+kzODE1NjUsLTE5ODA5MTI0MCwtMTI1OTMwNDY3NSwxNzQzODgz
+MjQ3LC04MjU1NzA3MzUsMTc2NjcwMjM3MSwtMTE0OTQ1ODM1My
+w0NTE2Mzg5MjQsLTExNjc4NDEzNjldfQ==
 -->
