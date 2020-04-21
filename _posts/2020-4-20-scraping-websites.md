@@ -29,7 +29,7 @@ Here's my code so far:
     driver.find_element_by_link_text('Films').click()
     time.sleep(1)  # Let the user actually see something!
     # I am selecting the genre "Dutch Films"
-    # The "?so=su"  
+    # The "?so=az"  
     driver.get('https://www.netflix.com/browse/genre/10606?so=su')
     time.sleep(10)  # Quite a long wait to make sure the page is fully loaded
 
@@ -46,6 +46,7 @@ On this page, I have a lot more information about the movie:
 - 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgyNTU3MDczNSwxNzY2NzAyMzcxLC0xMT
-Q5NDU4MzUzLDQ1MTYzODkyNCwtMTE2Nzg0MTM2OV19
+eyJoaXN0b3J5IjpbLTQzMDY0NDMxMiwtODI1NTcwNzM1LDE3Nj
+Y3MDIzNzEsLTExNDk0NTgzNTMsNDUxNjM4OTI0LC0xMTY3ODQx
+MzY5XX0=
 -->
