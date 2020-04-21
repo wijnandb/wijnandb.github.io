@@ -41,9 +41,9 @@ The next step is to get the categories per movie. There are two approaches I'm c
 - follow the link per movie and scrape all the content I want, including the categories.
 - look up the movies per category, resulting in a movie_id/category_id pair.
 
-I prefer the last method, for the simple reasomn that I wi
+I prefer the last method, for the simple reasomn that I will have the data in a format I can immediately 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1Nzk5NzcyOTYsMTc0Mzg4MzI0NywtOD
+eyJoaXN0b3J5IjpbLTEyNTkzMDQ2NzUsMTc0Mzg4MzI0NywtOD
 I1NTcwNzM1LDE3NjY3MDIzNzEsLTExNDk0NTgzNTMsNDUxNjM4
 OTI0LC0xMTY3ODQxMzY5XX0=
 -->
