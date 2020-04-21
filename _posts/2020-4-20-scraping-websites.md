@@ -43,15 +43,19 @@ The next step is to get the categories per movie. There are two approaches I'm c
 
 I prefer the last method, for the simple reason that I will have the data in a format I can immediately store in a table.
 
-Considering the load: I will have to go through all the categories I know (211), scroll to the end of the list and get the id's of all the movies and series within that category. For what I have seen, there are at most 5 different categories, and often there are less. Assuming 5 categories per movie, currently 3835 movies/series on the Dutch Netflix, there will be less than 20.000 movie/category combinations. That is acceptable.
+Considering the load: I will have to go through all the categories I know (211), scroll to the end of the list and get the id's of all the movies and series within that category. For what I have seen, there are at most 5 different categories, and often there are less. Assuming 5 categories per title, currently 3835 titles on the Dutch Netflix, there will be less than 20.000 movie/category combinations. That is acceptable.
 
 So, how to do it?
 
 - open Netflix
 - login
-- go to categ
+- go to category-page
+- scroll down (so all titles are listed)
+- get the id's for all titles
+- store them with the category_id
+- repeat for next category_id
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU1ODU0NzQzOCwtNjk5MzgxNTY1LC0xOT
+eyJoaXN0b3J5IjpbLTMxNzczOTczNSwtNjk5MzgxNTY1LC0xOT
 gwOTEyNDAsLTEyNTkzMDQ2NzUsMTc0Mzg4MzI0NywtODI1NTcw
 NzM1LDE3NjY3MDIzNzEsLTExNDk0NTgzNTMsNDUxNjM4OTI0LC
 0xMTY3ODQxMzY5XX0=
