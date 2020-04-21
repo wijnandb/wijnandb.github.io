@@ -43,10 +43,10 @@ The next step is to get the categories per movie. There are two approaches I'm c
 
 I prefer the last method, for the simple reason that I will have the data in a format I can immediately store in a table.
 
-Considering the load: I will have to go through all the categories I know (211), scroll to the end of the list and get the id's of all the movies and series within that category. For what I have seen, there 
+Considering the load: I will have to go through all the categories I know (211), scroll to the end of the list and get the id's of all the movies and series within that category. For what I have seen, there are at most 5 different categories, and often there are less. Assuming 5 categories per movie, there will be 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY5OTM4MTU2NSwtMTk4MDkxMjQwLC0xMj
-U5MzA0Njc1LDE3NDM4ODMyNDcsLTgyNTU3MDczNSwxNzY2NzAy
-MzcxLC0xMTQ5NDU4MzUzLDQ1MTYzODkyNCwtMTE2Nzg0MTM2OV
-19
+eyJoaXN0b3J5IjpbLTEzMTIzNDM3ODEsLTY5OTM4MTU2NSwtMT
+k4MDkxMjQwLC0xMjU5MzA0Njc1LDE3NDM4ODMyNDcsLTgyNTU3
+MDczNSwxNzY2NzAyMzcxLC0xMTQ5NDU4MzUzLDQ1MTYzODkyNC
+wtMTE2Nzg0MTM2OV19
 -->
