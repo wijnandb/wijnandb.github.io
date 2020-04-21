@@ -37,9 +37,13 @@ So now I am ready to start looking at the content of the page.
 
 I managed to get all the movielinks and I want to include the titles as well as the image that goes with the movie.
 
-The next step is to get the categories per movie
+The next step is to get the categories per movie. There are two approaches I'm considering:
+- follow the link per movie and scrape all the content I want, including the categories.
+- look up the movies per category, resulting in a movie_id/category_id pair.
+
+I prefer the last method, for the simple reasomn that I wi
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM5NDE4MjQzMSwxNzQzODgzMjQ3LC04Mj
-U1NzA3MzUsMTc2NjcwMjM3MSwtMTE0OTQ1ODM1Myw0NTE2Mzg5
-MjQsLTExNjc4NDEzNjldfQ==
+eyJoaXN0b3J5IjpbLTE1Nzk5NzcyOTYsMTc0Mzg4MzI0NywtOD
+I1NTcwNzM1LDE3NjY3MDIzNzEsLTExNDk0NTgzNTMsNDUxNjM4
+OTI0LC0xMTY3ODQxMzY5XX0=
 -->
