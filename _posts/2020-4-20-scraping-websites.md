@@ -35,18 +35,11 @@ Here's my code so far:
 
 So now I am ready to start looking at the content of the page.
 
-I managed to get all the links, but now I only want the movielinks and I want to include the titlkes as well as the image that goes with the movie.
+I managed to get all the movielinks and I want to include the titles as well as the image that goes with the movie.
 
-In a spreadsheet I have pasted the links to all the movies, which all have a unique ID, by which I can get to the overview page of that specific movie:
-
-[https://www.netflix.com/title/80137897](https://www.netflix.com/title/80137897)
-
-On this page, I have a lot more information about the movie:
-
-- 
-
+The next step is to get the categories per movie
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc0Mzg4MzI0NywtODI1NTcwNzM1LDE3Nj
-Y3MDIzNzEsLTExNDk0NTgzNTMsNDUxNjM4OTI0LC0xMTY3ODQx
-MzY5XX0=
+eyJoaXN0b3J5IjpbLTM5NDE4MjQzMSwxNzQzODgzMjQ3LC04Mj
+U1NzA3MzUsMTc2NjcwMjM3MSwtMTE0OTQ1ODM1Myw0NTE2Mzg5
+MjQsLTExNjc4NDEzNjldfQ==
 -->
