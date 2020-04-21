@@ -43,9 +43,10 @@ The next step is to get the categories per movie. There are two approaches I'm c
 
 I prefer the last method, for the simple reason that I will have the data in a format I can immediately store in a table.
 
-Considering the load: I will have to go through 
+Considering the load: I will have to go through all the categories I know (211)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5ODA5MTI0MCwtMTI1OTMwNDY3NSwxNz
-QzODgzMjQ3LC04MjU1NzA3MzUsMTc2NjcwMjM3MSwtMTE0OTQ1
-ODM1Myw0NTE2Mzg5MjQsLTExNjc4NDEzNjldfQ==
+eyJoaXN0b3J5IjpbMjAxMzYzNzE1NywtMTk4MDkxMjQwLC0xMj
+U5MzA0Njc1LDE3NDM4ODMyNDcsLTgyNTU3MDczNSwxNzY2NzAy
+MzcxLC0xMTQ5NDU4MzUzLDQ1MTYzODkyNCwtMTE2Nzg0MTM2OV
+19
 -->
