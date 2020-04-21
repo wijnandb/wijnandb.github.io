@@ -54,9 +54,11 @@ So, how to do it?
 - get the id's for all titles
 - store them with the category_id
 - repeat for next category_id
+
+I'm gonna get coding, wil post when I'm done and ready for the next step!
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIxODg4NTc1NywtNjk5MzgxNTY1LC0xOT
-gwOTEyNDAsLTEyNTkzMDQ2NzUsMTc0Mzg4MzI0NywtODI1NTcw
-NzM1LDE3NjY3MDIzNzEsLTExNDk0NTgzNTMsNDUxNjM4OTI0LC
-0xMTY3ODQxMzY5XX0=
+eyJoaXN0b3J5IjpbLTE5Mjc5NDUwMTgsLTY5OTM4MTU2NSwtMT
+k4MDkxMjQwLC0xMjU5MzA0Njc1LDE3NDM4ODMyNDcsLTgyNTU3
+MDczNSwxNzY2NzAyMzcxLC0xMTQ5NDU4MzUzLDQ1MTYzODkyNC
+wtMTE2Nzg0MTM2OV19
 -->
