@@ -55,6 +55,7 @@ So, how to do it?
 - open Netflix
 - login
 - go to category-page
+- 
 - scroll down (so all titles are listed)
 - get the id's for all titles
 - store them with the category_id
@@ -62,8 +63,9 @@ So, how to do it?
 
 I'm gonna get coding, wil post when I'm done and ready for the next step!
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ5MzY1NTAyNCwtMTkyNzk0NTAxOCwtNj
-k5MzgxNTY1LC0xOTgwOTEyNDAsLTEyNTkzMDQ2NzUsMTc0Mzg4
-MzI0NywtODI1NTcwNzM1LDE3NjY3MDIzNzEsLTExNDk0NTgzNT
-MsNDUxNjM4OTI0LC0xMTY3ODQxMzY5XX0=
+eyJoaXN0b3J5IjpbLTcxNzc5Njc1NywxNDkzNjU1MDI0LC0xOT
+I3OTQ1MDE4LC02OTkzODE1NjUsLTE5ODA5MTI0MCwtMTI1OTMw
+NDY3NSwxNzQzODgzMjQ3LC04MjU1NzA3MzUsMTc2NjcwMjM3MS
+wtMTE0OTQ1ODM1Myw0NTE2Mzg5MjQsLTExNjc4NDEzNjldfQ==
+
 -->
