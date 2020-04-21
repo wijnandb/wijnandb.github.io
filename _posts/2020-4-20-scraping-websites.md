@@ -45,7 +45,9 @@ I prefer the last method, for the simple reason that I will have the data in a f
 
 ~~Considering the load: I will have to go through all the categories I know (211), scroll to the end of the list and get the id's of all the movies and series within that category. For what I have seen, there are at most 5 different categories, and often there are less. Assuming 5 categories per title, currently 3835 titles on the Dutch Netflix, there will be less than 20.000 movie/category combinations. That is acceptable.~~
 
-OK, I was wrong there. There are [way more categories](https://www.whats-on-netflix.com/library/categories/) than I thought, although a lot of them do not contain any titles. Others, like [tearjerkers from the 1980s](https://www.netflix.com/browse/genre/30?so=az) are clearly a sub-category, in this case 
+OK, I was wrong there. There are [way more categories](https://www.whats-on-netflix.com/library/categories/) than I thought, although a lot of them do not contain any titles. Others, like [tearjerkers from the 1980s](https://www.netflix.com/browse/genre/30?so=az) are clearly a sub-category, in this case from [Tearjerkers](https://www.netflix.com/browse/genre/6384?so=az).
+
+
 So, how to do it?
 
 - open Netflix
@@ -58,7 +60,7 @@ So, how to do it?
 
 I'm gonna get coding, wil post when I'm done and ready for the next step!
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgzNDA5NjM0NywtMTkyNzk0NTAxOCwtNj
+eyJoaXN0b3J5IjpbLTE5OTM1NDczOSwtMTkyNzk0NTAxOCwtNj
 k5MzgxNTY1LC0xOTgwOTEyNDAsLTEyNTkzMDQ2NzUsMTc0Mzg4
 MzI0NywtODI1NTcwNzM1LDE3NjY3MDIzNzEsLTExNDk0NTgzNT
 MsNDUxNjM4OTI0LC0xMTY3ODQxMzY5XX0=
