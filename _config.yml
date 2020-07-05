@@ -8,8 +8,10 @@ twitter_username: wijnandb
 github_username: wijnandb
 # facebook: 
 linkedin: wijnandbaretta
-google_plus: wijnandbaretta
+# google_plus: wijnandbaretta
 # name: 
 
 # Build settings
 markdown: kramdown
+
+permalink: /:categories/:title/
