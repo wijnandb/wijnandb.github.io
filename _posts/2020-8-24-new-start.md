@@ -18,10 +18,12 @@ There are several different things I want:
 - build a presence that reflect who I am (or am aspiring to be...)
 - inspire other people
 
-And then there is the ease of things: if it takes too much time or hassle, I tend to bail out, or just abandon. This
+And then there is the ease of things: if it takes too much time or hassle, I tend to bail out, or just abandon. This has also to do with the goal: if the goal isn't clear, or unachievable, or uninspiring, abandonment will occur sooner.
+
+So maybe I shouldn't try to put it all in one place
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMjg5NDg2ODEsLTExMTAzMjQzNjUsNz
-cyMDY2NjldfQ==
+eyJoaXN0b3J5IjpbNTQ2MzA2NTcsLTExMTAzMjQzNjUsNzcyMD
+Y2NjldfQ==
 -->
