@@ -14,9 +14,10 @@ If I don't figure out what I want, and how to organize it, this will be just ano
 
 So, let's dive into what I want. 
 There are several different things I want:
-- s
+- document my ideas and learnings for myself
+- buil;d a presence that reflect who I am (or 
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg3OTQ1OTUxLDc3MjA2NjY5XX0=
+eyJoaXN0b3J5IjpbLTE3ODU2NzI5OTIsNzcyMDY2NjldfQ==
 -->
