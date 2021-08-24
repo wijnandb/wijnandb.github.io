@@ -15,9 +15,12 @@ If I don't figure out what I want, and how to organize it, this will be just ano
 So, let's dive into what I want. 
 There are several different things I want:
 - document my ideas and things I've learned, just for myself
-- build a presence that reflect who I am (or 
+- build a presence that reflect who I am (or am aspiring to be...)
+- inspire other people
+
+And then there is the ease of things: if it takes too much time or hassle, I 
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAxMTI4ODM5NCw3NzIwNjY2OV19
+eyJoaXN0b3J5IjpbMTM5NDYyNTYxOSw3NzIwNjY2OV19
 -->
