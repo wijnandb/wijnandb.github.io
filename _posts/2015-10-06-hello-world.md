@@ -3,7 +3,7 @@ layout: post
 title:  "Hello world...."
 date:   2015-10-06 11:56:51
 categories: 
-
+draft: true
 ---
 # Angst
 Met honderden mensen heb ik gesproken over onderwijs, over hoe het anders kan, hoe het anders moet, dat er veel 
