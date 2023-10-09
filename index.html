@@ -1,24 +1,100 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Repositories</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    </head>
+    <body>
+        <div class="container">
+            <br />
+            <h1>Repositories</h1>
+            <p></p>
+            <table id="repoTable" class="table table-striped">
+                <thead>
+                    <tr>
+                        <th onclick="sortTable(0)" scope="col">Name</th>
+                        <th onclick="sortTable(1)" scope="col">Description</th>
+                        <th onclick="sortTable(2)" scope="col">Open Issues</th>
+                        <th onclick="sortTable(3)" scope="col">Last Updated</th>
+                    </tr>
+                </thead>
+                <tbody id="repoTableBody">
+                    <!-- Data will be inserted here by JavaScript -->
+                </tbody>
+            </table>
+        </div>
+    
+        <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", function() {
+                fetch('sites.json')
+                    .then(response => response.json())
+                    .then(data => {
+                        // Sort data
+                        data.sort(function(a, b) {
+                            if (a.open_issues_count > b.open_issues_count) return -1;
+                            if (a.open_issues_count < b.open_issues_count) return 1;
+                            return new Date(b.updated_at) - new Date(a.updated_at);
+                        });
 
+                        // Populate table
+                        var tableBody = document.getElementById('repoTableBody');
+                        data.forEach(function(repo) {
+                            var row = tableBody.insertRow();
+                            row.insertCell(0).innerHTML = `<a href="${repo.html_url}">${repo.name}</a>`;
+                            row.insertCell(1).innerHTML = `<a href="https://wijnandb.github.io/${repo.name}">${repo.description}</a>`;
+                            row.insertCell(2).innerHTML = `<a href="${repo.html_url}/issues">${repo.open_issues_count}</a>`;
+                            row.insertCell(3).innerHTML = friendlyTimestamp(repo.updated_at);
+                        });
+                    });
+            });
 
-<div class="home">
-  <p class="element"></p><br>
-  <h1 class="page-heading">Posts</h1>
+            function sortTable(n) {
+                var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+                table = document.getElementById("repoTable");
+                switching = true;
+                dir = "asc"; 
+                while (switching) {
+                    switching = false;
+                    rows = table.rows;
+                    for (i = 1; i < (rows.length - 1); i++) {
+                        shouldSwitch = false;
+                        x = rows[i].getElementsByTagName("TD")[n];
+                        y = rows[i + 1].getElementsByTagName("TD")[n];
+                        if (dir == "asc") {
+                            if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+                                shouldSwitch = true;
+                                break;
+                            }
+                        } else if (dir == "desc") {
+                            if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+                                shouldSwitch = true;
+                                break;
+                            }
+                        }
+                    }
+                    if (shouldSwitch) {
+                        rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+                        switching = true;
+                        switchcount ++; 
+                    } else {
+                        if (switchcount == 0 && dir == "asc") {
+                            dir = "desc";
+                            switching = true;
+                        }
+                    }
+                }
+            }
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <!--p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p-->
-
-</div>
+            function friendlyTimestamp(rawTimestamp) {
+                const now = new Date();
+                const timestamp = new Date(rawTimestamp);
+                // Ensuring double-digit month and day
+                const year = timestamp.getFullYear();
+                const month = String(timestamp.getMonth() + 1).padStart(2, '0');
+                const day = String(timestamp.getDate()).padStart(2, '0');
+                return `${year}-${month}-${day}`;
+            }
+        </script> 
+    </body>
+</html>
+      
