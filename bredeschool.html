@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Repository Issues</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- In body of your HTML -->
+<div class="container mt-5">
+    <h1>Repository Issues</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Issue Number</th>
+                <th>Title</th>
+                <th>Labels</th>
+                <th>Comments</th>
+                <th>Assignees</th>
+            </tr>
+        </thead>
+        <tbody id="issues-body">
+            <!-- Issues will be injected here -->
+        </tbody>
+    </table>
+</div>
+<!-- Bootstrap Modal -->
+<div class="modal fade" id="issueDetailModal" tabindex="-1" aria-labelledby="issueDetailModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="issueDetailModalLabel">Issue Details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <!-- Issue Details HTML Snippet -->
+            <div class="issue-details">
+                <h2>Issue Detail: <span id="issue-title"></span></h2>
+                <!--img src="" alt="User Avatar" id="user-avatar" width="50" height="50"-->
+                <p>Opened by <strong id="user-login"></strong> on <time id="created-at"></time></p>
+                <p>Last updated: <time id="updated-at"></time></p>
+                <p>Status: <span id="issue-state"></span></p>
+                <p>Assignees: <span id="issue-assignees"></span></p>
+                
+                <h3>Description:</h3>
+                <p id="issue-body"></p>
+                
+                <p>Comments: <span id="comments-count"></span></p>
+                <p>Reactions: <span id="reactions-count"></span></p>
+                
+                <a href="" id="issue-link" target="_blank">View on GitHub</a>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('bredeschool_issues.json')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                const issuesBody = document.getElementById('issues-body');
+
+                data.forEach(issue => {
+                    const row = document.createElement('tr');
+                    row.classList.add('issue'); // Add class for event listener
+                    row.dataset.issueNumber = issue.number; // Store issue number in data attribute
+                
+                // Issue Number
+                const issueNumberCell = document.createElement('td');
+                const issueLink = document.createElement('a');
+                issueLink.href = issue.html_url;
+                issueLink.textContent = '#' + issue.number;
+                issueNumberCell.appendChild(issueLink);
+                row.appendChild(issueNumberCell);
+                
+                // Title
+                const titleCell = document.createElement('td');
+                titleCell.textContent = issue.title;
+                row.appendChild(titleCell);
+                
+                // Labels
+                const labelsCell = document.createElement('td');
+                labelsCell.textContent = issue.labels.map(label => label.name).join(', ');
+                row.appendChild(labelsCell);
+                
+                // Comments
+                const commentsCell = document.createElement('td');
+                commentsCell.textContent = issue.comments;
+                row.appendChild(commentsCell);
+                
+                // Assignees
+                const assigneesCell = document.createElement('td');
+                assigneesCell.textContent = issue.assignees.map(assignee => assignee.login).join(', ');
+                row.appendChild(assigneesCell);
+                
+                // Append row to the table body
+                issuesBody.appendChild(row);
+            });
+        // Add Click Event Listeners to Issues
+        document.querySelectorAll('.issue').forEach(issueElem => {
+            issueElem.addEventListener('click', function() {
+                const issueNumber = this.dataset.issueNumber;
+                const issue = data.find(i => i.number == issueNumber); // Use already fetched data
+                if (issue) {
+                    populateIssueDetail(issue);
+                    const issueDetailModal = new bootstrap.Modal(document.getElementById('issueDetailModal'));
+                    issueDetailModal.show();
+                }
+            });
+        });
+    })
+    .catch((error) => {
+        console.error('Fetch error: ', error);
+    });
+
+    function populateIssueDetail(issue) {
+        document.getElementById('issue-title').textContent = issue.title;
+        document.getElementById('user-avatar').src = issue.user.avatar_url;
+        document.getElementById('user-login').textContent = issue.user.login;
+        document.getElementById('created-at').textContent = new Date(issue.created_at).toLocaleDateString();
+        document.getElementById('updated-at').textContent = new Date(issue.updated_at).toLocaleDateString();
+        document.getElementById('issue-state').textContent = issue.state;
+        document.getElementById('issue-assignees').textContent = issue.assignees.map(a => a.login).join(', ');
+        document.getElementById('issue-body').textContent = issue.body;
+        document.getElementById('comments-count').textContent = issue.comments;
+        document.getElementById('reactions-count').textContent = issue.reactions.total_count;
+        document.getElementById('issue-link').href = issue.html_url;
+    }
+});
+    </script>
+    
+</body>
+</html>
