@@ -1,0 +1,18 @@
+name: Fetch and Store Issues
+
+on:
+  # Trigger the workflow manually or define other event triggers as per your need
+  workflow_dispatch:
+
+jobs:
+  fetch-and-store-issues:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Fetch Issues and Store as JSON
+      run: python fetch_issues.py
+      env:
+        GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
