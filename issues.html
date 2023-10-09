@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Repository Issues</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- In body of your HTML -->
+<div class="container mt-5">
+    <h1>Repository Issues</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Issue Number</th>
+                <th>Title</th>
+                <th>Labels</th>
+                <th>Comments</th>
+                <th>Assignees</th>
+            </tr>
+        </thead>
+        <tbody id="issues-body">
+            <!-- Issues will be injected here -->
+        </tbody>
+    </table>
+</div>
+
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+    async function fetchRepoIssues(owner, repo) {
+        try {
+            const response = await fetch(`https://api.github.com/repos/${owner}/${repo}/issues`);
+            const issues = await response.json();
+            
+            if (!response.ok) {
+                throw new Error(issues.message || "Failed to fetch issues");
+            }
+    
+            renderIssues(issues, owner, repo);
+            
+        } catch (error) {
+            console.error("Error fetching issues: ", error);
+        }
+    }
+    
+    function renderIssues(issues, owner, repo) {
+        const tbody = document.getElementById('issues-body');
+        tbody.innerHTML = "";  // Clear existing issues
+        
+        issues.forEach(issue => {
+            const row = document.createElement('tr');
+            
+            // Cells
+            let cell = document.createElement('td');
+            let link = document.createElement('a');
+            link.href = `https://github.com/${owner}/${repo}/issues/${issue.number}`;
+            link.textContent = `#${issue.number}`;
+            cell.appendChild(link);
+            row.appendChild(cell);
+    
+            // Other cells...
+            // Title, Labels, Comments, and Assignees
+    
+            // Title
+            cell = document.createElement('td');
+            link = document.createElement('a');
+            link.href = `https://github.com/${owner}/${repo}/issues/${issue.number}`;
+            link.textContent = issue.title;
+            cell.appendChild(link);
+            row.appendChild(cell);
+    
+            // Labels
+            cell = document.createElement('td');
+            cell.textContent = issue.labels.map(label => label.name).join(', ');
+            row.appendChild(cell);
+    
+            // Comments
+            cell = document.createElement('td');
+            let badge = document.createElement('span');
+            badge.className = 'badge badge-primary';
+            badge.textContent = issue.comments;
+            cell.appendChild(badge);
+            row.appendChild(cell);
+    
+            // Assignees
+            cell = document.createElement('td');
+            cell.textContent = issue.assignees.map(assignee => assignee.login).join(', ');
+            row.appendChild(cell);
+    
+            tbody.appendChild(row);
+        });
+    }
+    
+    // Fetch issues when page loads
+    document.addEventListener('DOMContentLoaded', () => {
+        fetchRepoIssues('wijnandb', 'wielerspel2023');
+    });
+    </script>
+    
+</body>
+</html>
