@@ -6,6 +6,7 @@
     <title>Repository Issues</title>
     <!-- Bootstrap CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body>
 
@@ -63,6 +64,7 @@
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 
 <script>
         document.addEventListener("DOMContentLoaded", function() {
@@ -130,6 +132,8 @@
     });
 
     function populateIssueDetail(issue) {
+        //console.log(issue.body);  // This should log the markdown content to your console
+
         document.getElementById('issue-title').textContent = issue.title;
         document.getElementById('user-avatar').src = issue.user.avatar_url;
         document.getElementById('user-login').textContent = issue.user.login;
@@ -137,7 +141,7 @@
         document.getElementById('updated-at').textContent = new Date(issue.updated_at).toLocaleDateString();
         document.getElementById('issue-state').textContent = issue.state;
         document.getElementById('issue-assignees').textContent = issue.assignees.map(a => a.login).join(', ');
-        document.getElementById('issue-body').textContent = issue.body;
+        document.getElementById('issue-body').innerHTML = marked.parse(issue.body || '');
         document.getElementById('comments-count').textContent = issue.comments;
         document.getElementById('reactions-count').textContent = issue.reactions.total_count;
         document.getElementById('issue-link').href = issue.html_url;
