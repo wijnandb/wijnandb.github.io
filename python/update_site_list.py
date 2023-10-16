@@ -46,7 +46,7 @@ def update_site_list():
             active_sites.append(site_info)
 
     # Update a file in your Jekyll site with the list of active sites
-    with open('data/sites.json', 'w') as file:
+    with open('sites.json', 'w') as file:
         json.dump(active_sites, file, indent=4)
 
 if __name__ == "__main__":
