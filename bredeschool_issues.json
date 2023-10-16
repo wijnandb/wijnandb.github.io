@@ -108,7 +108,17 @@
             "type": "User",
             "site_admin": false
         },
-        "labels": [],
+        "labels": [
+            {
+                "id": 2273670357,
+                "node_id": "MDU6TGFiZWwyMjczNjcwMzU3",
+                "url": "https://api.github.com/repos/wijnandb/bredeschool/labels/enhancement",
+                "name": "enhancement",
+                "color": "a2eeef",
+                "default": true,
+                "description": "New feature or request"
+            }
+        ],
         "state": "open",
         "locked": false,
         "assignee": null,
@@ -152,7 +162,7 @@
         },
         "comments": 0,
         "created_at": "2023-10-05T03:28:14Z",
-        "updated_at": "2023-10-16T18:18:29Z",
+        "updated_at": "2023-10-16T20:50:50Z",
         "closed_at": null,
         "author_association": "OWNER",
         "active_lock_reason": null,
@@ -252,11 +262,11 @@
         "milestone": null,
         "comments": 0,
         "created_at": "2023-10-04T19:19:48Z",
-        "updated_at": "2023-10-04T19:19:49Z",
+        "updated_at": "2023-10-16T21:17:41Z",
         "closed_at": null,
         "author_association": "OWNER",
         "active_lock_reason": null,
-        "body": "Hoe kunnen we de \r\n\r\n- [ ] demo de plannings-tool voor scholen\r\n- [ ] aparte categorie toevoegen PO/Vo activiteiten\r\n- [ ] voer de PO/VO activiteeiten apart in\r\n- [ ] Bespreken: wel of geen presentie, billing, meerdere docenten aan een activiteit",
+        "body": "Hoe kunnen we de activiteiten voor PO/VO ook opnemen in de Brede School applicatie? \r\n\r\n- [ ] demo de plannings-tool voor scholen\r\n- [ ] aparte categorie toevoegen PO/VO activiteiten\r\n- [ ] voer de PO/VO activiteeiten apart in\r\n- [ ] Bespreken: wel of geen presentie, billing, meerdere docenten aan een activiteit",
         "reactions": {
             "url": "https://api.github.com/repos/wijnandb/bredeschool/issues/381/reactions",
             "total_count": 0,
@@ -304,7 +314,17 @@
             "type": "User",
             "site_admin": false
         },
-        "labels": [],
+        "labels": [
+            {
+                "id": 6092210839,
+                "node_id": "LA_kwDOER-wR88AAAABax_Clw",
+                "url": "https://api.github.com/repos/wijnandb/bredeschool/labels/frontend",
+                "name": "frontend",
+                "color": "C7E2E7",
+                "default": false,
+                "description": ""
+            }
+        ],
         "state": "open",
         "locked": false,
         "assignee": null,
@@ -312,7 +332,7 @@
         "milestone": null,
         "comments": 0,
         "created_at": "2023-10-04T10:09:45Z",
-        "updated_at": "2023-10-04T10:09:45Z",
+        "updated_at": "2023-10-16T21:19:59Z",
         "closed_at": null,
         "author_association": "OWNER",
         "active_lock_reason": null,
@@ -544,7 +564,17 @@
             "type": "User",
             "site_admin": false
         },
-        "labels": [],
+        "labels": [
+            {
+                "id": 6092209303,
+                "node_id": "LA_kwDOER-wR88AAAABax-8lw",
+                "url": "https://api.github.com/repos/wijnandb/bredeschool/labels/performance",
+                "name": "performance",
+                "color": "5319e7",
+                "default": false,
+                "description": ""
+            }
+        ],
         "state": "open",
         "locked": false,
         "assignee": {
@@ -592,7 +622,7 @@
         "milestone": null,
         "comments": 1,
         "created_at": "2023-10-03T06:30:02Z",
-        "updated_at": "2023-10-03T07:01:04Z",
+        "updated_at": "2023-10-16T21:19:30Z",
         "closed_at": null,
         "author_association": "OWNER",
         "active_lock_reason": null,
@@ -644,7 +674,17 @@
             "type": "User",
             "site_admin": false
         },
-        "labels": [],
+        "labels": [
+            {
+                "id": 6092209303,
+                "node_id": "LA_kwDOER-wR88AAAABax-8lw",
+                "url": "https://api.github.com/repos/wijnandb/bredeschool/labels/performance",
+                "name": "performance",
+                "color": "5319e7",
+                "default": false,
+                "description": ""
+            }
+        ],
         "state": "open",
         "locked": false,
         "assignee": null,
@@ -652,7 +692,7 @@
         "milestone": null,
         "comments": 0,
         "created_at": "2023-10-03T06:26:38Z",
-        "updated_at": "2023-10-03T06:27:32Z",
+        "updated_at": "2023-10-16T21:19:46Z",
         "closed_at": null,
         "author_association": "OWNER",
         "active_lock_reason": null,
@@ -704,7 +744,17 @@
             "type": "User",
             "site_admin": false
         },
-        "labels": [],
+        "labels": [
+            {
+                "id": 6067802938,
+                "node_id": "LA_kwDOER-wR88AAAABaatTOg",
+                "url": "https://api.github.com/repos/wijnandb/bredeschool/labels/work%20in%20progress",
+                "name": "work in progress",
+                "color": "455D2D",
+                "default": false,
+                "description": ""
+            }
+        ],
         "state": "open",
         "locked": false,
         "assignee": {
@@ -752,7 +802,7 @@
         "milestone": null,
         "comments": 0,
         "created_at": "2023-10-03T06:21:45Z",
-        "updated_at": "2023-10-03T06:22:01Z",
+        "updated_at": "2023-10-16T20:51:06Z",
         "closed_at": null,
         "author_association": "OWNER",
         "active_lock_reason": null,
