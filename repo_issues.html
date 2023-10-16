@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Issues Viewer</title>
+    <style>
+        .issue {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        .label {
+            padding: 5px;
+            border: 1px solid #ccc;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        .label.highlighted {
+            background-color: #007BFF;
+            color: white;
+        }
+        .badge-secondary.highlighted, .badge-primary {
+            background-color: #007BFF !important;
+        }
+    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body class="container">
+    <div id="labelsContainer" class="my-4"></div>
+
+    <div class="row" id="issuesContainer"></div>
+
+    <script>
+        async function fetchIssues() {
+            const response = await fetch('bredeschool_issues.json');
+            const issuesData = await response.json();
+            return issuesData;
+        }
+
+        function renderLabels(labels) {
+            const container = document.getElementById('labelsContainer');
+            labels.forEach(label => {
+                const labelDiv = document.createElement('span');
+                labelDiv.className = 'badge badge-secondary mx-1';
+                labelDiv.textContent = label;
+                labelDiv.addEventListener('click', () => {
+                    labelDiv.classList.toggle('badge-primary');
+                    labelDiv.classList.toggle('badge-secondary');
+                    filterIssues();
+                });
+                container.appendChild(labelDiv);
+            });
+        }
+
+        function renderIssues(issues) {
+            const container = document.getElementById('issuesContainer');
+            container.innerHTML = '';  // Clear previous issues
+            issues.forEach(issue => {
+                const columnDiv = document.createElement('div');
+                columnDiv.className = 'col-md-4 mb-4';
+                
+                const issueDiv = document.createElement('div');
+                issueDiv.className = 'card h-100';
+                issueDiv.innerHTML = `
+                    <div class="card-body">
+                        <h5 class="card-title">${issue.title}</h5>
+                        <div id="issue-labels-${issue.id}"></div>
+                        <!-- ...other issue details -->
+                    </div>
+                `;
+                columnDiv.appendChild(issueDiv);
+                container.appendChild(columnDiv);
+
+                // Render labels for each issue
+                const issueLabelsContainer = document.getElementById(`issue-labels-${issue.id}`);
+                issue.labels.forEach(label => {
+                    const labelDiv = document.createElement('span');
+                    labelDiv.className = 'badge badge-secondary mx-1';
+                    labelDiv.textContent = label.name;
+                    issueLabelsContainer.appendChild(labelDiv);
+                });
+            });
+        }
+
+        function filterIssues() {
+            const filteredIssues = issuesData.filter(issue =>
+                issue.title.toLowerCase().includes(searchText) &&
+                (selectedState ? issue.state === selectedState : true)
+            );
+            renderIssues(filteredIssues);
+        }
+
+        // Initial render
+        fetchIssues().then(issuesData => {
+        // Now issuesData is available to use
+        renderIssues(issuesData);
+    });
+    let allIssues = [];
+
+async function fetchIssues() {
+    try {
+        const response = await fetch('bredeschool_issues.json');
+        if (!response.ok) {
+            throw new Error('Network response was not ok ' + response.statusText);
+        }
+        const issuesData = await response.json();
+        allIssues = issuesData;  // Store all issues
+        const uniqueLabels = extractUniqueLabels(issuesData);
+        renderLabels(uniqueLabels);
+        return issuesData;
+    } catch (error) {
+        console.error('There has been a problem with your fetch operation:', error);
+    }
+}
+
+function extractUniqueLabels(issues) {
+    const labelsSet = new Set();
+    issues.forEach(issue => {
+        issue.labels.forEach(label => {
+            labelsSet.add(label.name);
+        });
+    });
+    return Array.from(labelsSet);
+}
+
+function renderLabels(labels) {
+    const container = document.getElementById('labelsContainer');
+    labels.forEach(label => {
+        const labelDiv = document.createElement('div');
+        labelDiv.className = 'label';
+        labelDiv.textContent = label;
+        labelDiv.addEventListener('click', () => {
+            labelDiv.classList.toggle('highlighted');
+            filterIssues();
+        });
+        container.appendChild(labelDiv);
+    });
+}
+
+function filterIssues() {
+    const highlightedLabels = Array.from(document.querySelectorAll('.label.highlighted'))
+        .map(labelDiv => labelDiv.textContent);
+    const filteredIssues = allIssues.filter(issue =>
+        highlightedLabels.every(highlightedLabel =>
+            issue.labels.some(label => label.name === highlightedLabel)
+        )
+    );
+    renderIssues(filteredIssues);
+}
+
+
+
+    </script>
+</body>
+</html>
