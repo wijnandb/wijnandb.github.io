@@ -1,0 +1,21 @@
+name: Fetch sites and issues
+
+on:
+  schedule:
+    - cron: '0 */8 * * *'
+    
+  # Trigger the workflow manually or define other event triggers as per your need
+  workflow_dispatch:
+
+jobs:
+  fetch-and-store-issues:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Fetch Issues and Store as JSON
+      run: python python/update_site_list.py
+      env:
+        GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
