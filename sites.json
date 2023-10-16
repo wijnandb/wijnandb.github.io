@@ -44,7 +44,7 @@
         "html_url": "https://github.com/wijnandb/digimetis",
         "created_at": "2017-12-20T21:06:09Z",
         "updated_at": "2017-12-20T21:09:58Z",
-        "open_issues_count": 0,
+        "open_issues_count": 1,
         "default_branch": "master",
         "homepage": "https://wijnandb.github.io/digimetis",
         "description": null
@@ -53,9 +53,9 @@
         "name": "eduraam",
         "html_url": "https://github.com/wijnandb/eduraam",
         "created_at": "2015-12-10T09:26:12Z",
-        "updated_at": "2015-12-10T09:28:38Z",
+        "updated_at": "2023-10-10T19:48:15Z",
         "open_issues_count": 0,
-        "default_branch": "master",
+        "default_branch": "main",
         "homepage": "https://wijnandb.github.io/eduraam",
         "description": "Idee over platform om onderwijscontent- en toepassingen te delen"
     },
@@ -94,7 +94,7 @@
         "html_url": "https://github.com/wijnandb/horloges",
         "created_at": "2023-02-16T14:41:52Z",
         "updated_at": "2023-09-12T09:46:55Z",
-        "open_issues_count": 0,
+        "open_issues_count": 1,
         "default_branch": "main",
         "homepage": "https://wijnandb.github.io/horloges",
         "description": null
@@ -113,7 +113,7 @@
         "name": "KnibbeResearch",
         "html_url": "https://github.com/wijnandb/KnibbeResearch",
         "created_at": "2014-03-28T09:25:45Z",
-        "updated_at": "2014-11-28T14:59:49Z",
+        "updated_at": "2023-10-10T12:14:50Z",
         "open_issues_count": 0,
         "default_branch": "master",
         "homepage": "https://wijnandb.github.io/KnibbeResearch",
@@ -133,9 +133,9 @@
         "name": "montessori",
         "html_url": "https://github.com/wijnandb/montessori",
         "created_at": "2016-11-29T15:29:07Z",
-        "updated_at": "2016-11-30T07:54:24Z",
-        "open_issues_count": 1,
-        "default_branch": "master",
+        "updated_at": "2023-10-09T19:52:06Z",
+        "open_issues_count": 0,
+        "default_branch": "main",
         "homepage": "https://wijnandb.github.io/montessori",
         "description": "Sinterklaas heeft hulp nodig!"
     },
@@ -143,9 +143,9 @@
         "name": "notes",
         "html_url": "https://github.com/wijnandb/notes",
         "created_at": "2019-03-03T12:34:26Z",
-        "updated_at": "2019-05-13T14:26:31Z",
+        "updated_at": "2023-10-10T19:29:32Z",
         "open_issues_count": 0,
-        "default_branch": "master",
+        "default_branch": "main",
         "homepage": "https://wijnandb.github.io/notes",
         "description": "Random thoughts and musings about programming and life"
     },
@@ -154,7 +154,7 @@
         "html_url": "https://github.com/wijnandb/perceptum",
         "created_at": "2023-03-15T13:41:39Z",
         "updated_at": "2023-10-09T10:36:45Z",
-        "open_issues_count": 2,
+        "open_issues_count": 4,
         "default_branch": "main",
         "homepage": "https://wijnandb.github.io/perceptum",
         "description": "Company website for Perceptum"
@@ -173,8 +173,8 @@
         "name": "rugby-noordwijk",
         "html_url": "https://github.com/wijnandb/rugby-noordwijk",
         "created_at": "2017-02-02T10:36:37Z",
-        "updated_at": "2020-01-22T21:15:33Z",
-        "open_issues_count": 0,
+        "updated_at": "2023-10-10T19:31:56Z",
+        "open_issues_count": 1,
         "default_branch": "master",
         "homepage": "https://wijnandb.github.io/rugby-noordwijk",
         "description": "Website van Rugby Noordwijk. Gebaseerd op Minimal Mistakes, Jekyll"
@@ -200,16 +200,6 @@
         "description": null
     },
     {
-        "name": "scratch",
-        "html_url": "https://github.com/wijnandb/scratch",
-        "created_at": "2016-10-17T14:03:41Z",
-        "updated_at": "2016-10-17T14:03:53Z",
-        "open_issues_count": 3,
-        "default_branch": "master",
-        "homepage": "https://wijnandb.github.io/scratch",
-        "description": "Programmeren op school. Uitleg over Scratch"
-    },
-    {
         "name": "technisch-lezen",
         "html_url": "https://github.com/wijnandb/technisch-lezen",
         "created_at": "2015-11-18T14:44:31Z",
@@ -224,7 +214,7 @@
         "html_url": "https://github.com/wijnandb/testhtml",
         "created_at": "2020-06-27T21:23:26Z",
         "updated_at": "2023-02-08T12:53:29Z",
-        "open_issues_count": 2,
+        "open_issues_count": 3,
         "default_branch": "master",
         "homepage": "https://wijnandb.github.io/testhtml",
         "description": "trying to get a simple html site up and running"
@@ -254,7 +244,7 @@
         "html_url": "https://github.com/wijnandb/wielerspel-viz",
         "created_at": "2017-08-19T10:17:04Z",
         "updated_at": "2020-05-25T16:27:38Z",
-        "open_issues_count": 2,
+        "open_issues_count": 3,
         "default_branch": "master",
         "homepage": "https://wijnandb.github.io/wielerspel-viz",
         "description": "Visualisaties voor het onvolprezen wielerspel, zie http://wielerspel.com"
@@ -274,7 +264,7 @@
         "html_url": "https://github.com/wijnandb/wielerspel2024",
         "created_at": "2023-10-06T17:31:16Z",
         "updated_at": "2023-10-07T07:56:50Z",
-        "open_issues_count": 8,
+        "open_issues_count": 17,
         "default_branch": "main",
         "homepage": "https://wijnandb.github.io/wielerspel2024",
         "description": "New version of the [Wielerspel](https://wijnandb.github.io/wielerspel2023) with historical results and graphs"
@@ -283,9 +273,9 @@
         "name": "wijnandb.github.io",
         "html_url": "https://github.com/wijnandb/wijnandb.github.io",
         "created_at": "2015-09-23T19:06:35Z",
-        "updated_at": "2023-08-08T09:36:45Z",
-        "open_issues_count": 0,
-        "default_branch": "master",
+        "updated_at": "2023-10-09T20:42:04Z",
+        "open_issues_count": 3,
+        "default_branch": "main",
         "homepage": "https://wijnandb.github.io/wijnandb.github.io",
         "description": "Personal site, Jekyll on Github pages"
     }
