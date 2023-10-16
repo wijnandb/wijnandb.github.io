@@ -15,7 +15,20 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v4.1.0
 
+    - name: set user
+      run: |
+        git config --global user.email "wb@retta.nl"
+        git config --global user.name "wijnandb"
+
+    - name: pull latest changes
+      run: git pull
+      
     - name: Fetch Issues and Store as JSON
       run: python python/update_site_list.py
       env:
         GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
+
+    - name: Check for new data
+      id: check-new-data
+      run: |
+        git diff --quiet || (git add . && git commit -m "Site list and issues refreshed at  $(date +'%Y-%m-%dT%H:%M:%S')" && git push origin HEAD:main)
