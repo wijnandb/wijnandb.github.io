@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gantt Chart</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Custom styles for the Gantt chart */
+        .gantt-chart {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .gantt-chart th, .gantt-chart td {
+            border: 1px solid #e0e0e0;
+            padding: 8px;
+        }
+        .gantt-chart th:first-child,
+        .gantt-chart td:first-child {
+            width: 300px; /* Adjust this value according to your preference */
+        }
+
+        .gantt-bar {
+            background-color: #007bff; /* Bootstrap primary color */
+            text-align: center;
+            color: white;
+        }
+        .draggable-cell {
+            cursor: grab;  /* Hand cursor that appears to be grabbing something */
+        }
+
+        .draggable-cell:active {
+            cursor: grabbing;
+        }
+
+        .drop-target {
+            color: #ffffff;  /* Assuming your default font color is black */
+            background-color: #000000;  /* Assuming your default background is white */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="mt-5">
+        <h2>Gantt Chart for GitHub Issues</h2>
+        <button id="updateDates">Update Dates</button>
+        <table class="gantt-chart">
+            <thead>
+                <tr>
+                    <th>Issue</th>
+                    <!-- Date headers will be populated by JavaScript -->
+                </tr>
+            </thead>
+            <tbody id="gantt-chart-body">
+                <!-- Rows will be populated by JavaScript -->
+            </tbody>
+        </table>
+    </div>
+    
+
+<!-- JavaScript & Bootstrap JS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+
+// Fetch the JSON data from the external file
+fetch('bredeschool_issues.json')
+    .then(response => {
+        // Check if the request was successful
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json();
+    })
+    .then(issues => {
+            const chartBody = document.getElementById("gantt-chart-body");
+            
+            // Generate the date headers for the next 'n' days based on the number of issues, skipping weekends
+            const headerRow = document.querySelector(".gantt-chart thead tr");
+            let date = new Date();
+            for(let i = 0; i < issues.length; i++) {
+                while (date.getDay() === 6 || date.getDay() === 0) { // Skip Saturday (6) and Sunday (0)
+                    date.setDate(date.getDate() + 1);
+                }
+
+                const dateCell = document.createElement("th");
+                dateCell.textContent = date.toDateString();
+                headerRow.appendChild(dateCell);
+                
+                // If the current day is Friday, add a 20px wide grey bar
+                if (date.getDay() === 5) {
+                    const greyBar = document.createElement("th");
+                    greyBar.style.width = "20px";
+                    greyBar.style.backgroundColor = "#e0e0e0";
+                    headerRow.appendChild(greyBar);
+                }
+
+                date.setDate(date.getDate() + 1);
+            }
+
+            issues.forEach((issue, index) => {
+                const row = document.createElement("tr");
+                
+                const titleCell = document.createElement("td");
+                titleCell.innerHTML = `<a href="${issue.html_url}" target="_blank">${issue.title}</a>`;
+                row.appendChild(titleCell);
+
+                date = new Date();
+                for(let i = 0; i < headerRow.childElementCount - 1; i++) { // -1 to avoid counting the title cell
+                    const dateCell = document.createElement("td");
+
+                    while (date.getDay() === 6 || date.getDay() === 0) { // Skip Saturday (6) and Sunday (0)
+                        date.setDate(date.getDate() + 1);
+                    }
+
+                    if (i === index) {
+                        dateCell.classList.add("gantt-bar");
+                        dateCell.innerHTML = "&#9679;"; // Using a dot marker for planned issues
+                    }
+                    row.appendChild(dateCell);
+
+                    // If the current day is Friday, add a 20px wide grey bar
+                    if (date.getDay() === 5) {
+                        const greyBar = document.createElement("td");
+                        greyBar.style.width = "20px";
+                        greyBar.style.backgroundColor = "#e0e0e0";
+                        row.appendChild(greyBar);
+                    }
+
+                    date.setDate(date.getDate() + 1);
+                }
+
+                chartBody.appendChild(row);
+            });
+
+
+                // Making only the first cells draggable
+                const firstCells = chartBody.querySelectorAll("tr td:first-child");
+                firstCells.forEach(cell => {
+                    cell.setAttribute('draggable', true);
+                    cell.classList.add('draggable-cell');  // Add the CSS class for cursor style
+
+                    cell.addEventListener('dragstart', function(e) {
+                        e.dataTransfer.setData('text/plain', Array.from(cell.parentNode.parentNode.children).indexOf(cell.parentNode));
+                    });
+                });
+
+                const rows = chartBody.querySelectorAll("tr");
+                rows.forEach(row => {
+                    const targetCell = row.querySelector("td:first-child");
+
+                    targetCell.addEventListener('dragover', function(e) {
+                        e.preventDefault(); // Required to allow dropping
+                    });
+
+                    targetCell.addEventListener('dragenter', function(e) {
+                        e.target.classList.add('drop-target');  // Highlight potential drop target
+                    });
+
+                    targetCell.addEventListener('dragleave', function(e) {
+                        e.target.classList.remove('drop-target');  // Remove highlight from potential drop target
+                    });
+
+                    targetCell.addEventListener('drop', function(e) {
+                        e.preventDefault();
+                        
+                        const fromIndex = e.dataTransfer.getData('text/plain');
+                        const toIndex = Array.from(row.parentNode.children).indexOf(row);
+                        
+                        if (fromIndex < toIndex) {
+                            row.parentNode.insertBefore(rows[fromIndex], row.nextSibling);
+                        } else {
+                            row.parentNode.insertBefore(rows[fromIndex], row);
+                        }
+
+                        // Remove any remaining drop target highlights
+                        document.querySelectorAll('.drop-target').forEach(cell => {
+                            cell.classList.remove('drop-target');
+                        });
+                    });
+                });
+        
+            // Function to recompute and update the due dates based on issue order
+            function updateDueDates() {
+                const rows = chartBody.querySelectorAll("tr");
+                let date = new Date();
+                rows.forEach(row => {
+                    const cells = row.querySelectorAll("td");
+                    for(let i = 1; i < cells.length; i++) {
+                        while (date.getDay() === 6 || date.getDay() === 0) { // Skip Saturday (6) and Sunday (0)
+                            date.setDate(date.getDate() + 1);
+                        }
+
+                        if (cells[i].classList.contains("gantt-bar")) {
+                            cells[i].textContent = date.toDateString();
+                        } else {
+                            cells[i].textContent = "";
+                        }
+
+                        date.setDate(date.getDate() + 1);
+                    }
+                });
+            }
+
+            // Add a click event to the update button, with a check
+            const updateButton = document.getElementById("updateDates");
+            if(updateButton) {
+                updateButton.addEventListener("click", updateDueDates);
+            } else {
+                console.error("Update Dates button not found!");
+            }
+
+        })
+        .catch(error => {
+            console.log('There was a problem with the fetch operation:', error.message);
+        });
+    });
+        
+
+</script>
+
+</body>
+</html>
