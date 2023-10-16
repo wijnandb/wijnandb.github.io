@@ -16,4 +16,4 @@ markdown: kramdown
 
 permalink: /:categories/:title/
 
-exclude: [python, data, sites.json]
+exclude: [python]
