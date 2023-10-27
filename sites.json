@@ -154,7 +154,7 @@
         "html_url": "https://github.com/wijnandb/perceptum",
         "created_at": "2023-03-15T13:41:39Z",
         "updated_at": "2023-10-09T10:36:45Z",
-        "open_issues_count": 4,
+        "open_issues_count": 5,
         "default_branch": "main",
         "homepage": "https://wijnandb.github.io/perceptum",
         "description": "Company website for Perceptum"
@@ -198,6 +198,16 @@
         "default_branch": "master",
         "homepage": "https://wijnandb.github.io/schrijven",
         "description": null
+    },
+    {
+        "name": "screenshots_automated",
+        "html_url": "https://github.com/wijnandb/screenshots_automated",
+        "created_at": "2023-10-19T13:57:09Z",
+        "updated_at": "2023-10-19T14:54:24Z",
+        "open_issues_count": 1,
+        "default_branch": "main",
+        "homepage": "https://wijnandb.github.io/screenshots_automated",
+        "description": "Application to automaticaaly check sites page by page, login if needed and take screenshots."
     },
     {
         "name": "technisch-lezen",
@@ -254,7 +264,7 @@
         "html_url": "https://github.com/wijnandb/wielerspel2023",
         "created_at": "2023-01-23T06:52:02Z",
         "updated_at": "2023-09-29T15:56:28Z",
-        "open_issues_count": 11,
+        "open_issues_count": 12,
         "default_branch": "main",
         "homepage": "https://wijnandb.github.io/wielerspel2023",
         "description": "Stand van het wielerspel, automatisch gegenereerd"
@@ -264,7 +274,7 @@
         "html_url": "https://github.com/wijnandb/wielerspel2024",
         "created_at": "2023-10-06T17:31:16Z",
         "updated_at": "2023-10-07T07:56:50Z",
-        "open_issues_count": 17,
+        "open_issues_count": 22,
         "default_branch": "main",
         "homepage": "https://wijnandb.github.io/wielerspel2024",
         "description": "New version of the [Wielerspel](https://wijnandb.github.io/wielerspel2023) with historical results and graphs"
