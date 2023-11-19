@@ -468,17 +468,7 @@
             "type": "User",
             "site_admin": false
         },
-        "labels": [
-            {
-                "id": 6067802938,
-                "node_id": "LA_kwDOER-wR88AAAABaatTOg",
-                "url": "https://api.github.com/repos/wijnandb/bredeschool/labels/work%20in%20progress",
-                "name": "work in progress",
-                "color": "455D2D",
-                "default": false,
-                "description": ""
-            }
-        ],
+        "labels": [],
         "state": "open",
         "locked": false,
         "assignee": null,
@@ -486,7 +476,7 @@
         "milestone": null,
         "comments": 0,
         "created_at": "2023-11-16T07:18:50Z",
-        "updated_at": "2023-11-17T07:10:26Z",
+        "updated_at": "2023-11-19T05:45:10Z",
         "closed_at": null,
         "author_association": "COLLABORATOR",
         "active_lock_reason": null,
@@ -498,7 +488,7 @@
             "patch_url": "https://github.com/wijnandb/bredeschool/pull/451.patch",
             "merged_at": null
         },
-        "body": "\r\nBackend\r\n- [x]  setup django-rest-framework\r\n- [x] create Serializer for Student model\r\n- [x] create Permission class for school manager\r\n- [x]  create api end-point\r\n- [x] implement filter \r\n- [x] write test ",
+        "body": "Backend\r\n- [x]  setup django-rest-framework\r\n- [x] create Serializer for Student model\r\n- [x] create Permission class for school manager\r\n- [x]  create api end-point\r\n- [x] implement filter \r\n- [x] write test \r\n- [x] update pagination to support datatable\r\n- [x] implement ordering on server\r\n\r\nFrontend\r\n- [x] implement datatable with ajax\r\n- [x] pagination\r\n- [x] search\r\n- [x] filter by group",
         "reactions": {
             "url": "https://api.github.com/repos/wijnandb/bredeschool/issues/451/reactions",
             "total_count": 0,
